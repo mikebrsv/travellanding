@@ -4,9 +4,10 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const img = require('./rules/img.js');
+const images = require('./rules/images.js');
 const pug = require('./rules/pug.js');
 const sass = require('./rules/sass.js');
+const videos = require('./rules/videos.js');
 
 module.exports = {
   // mode: 'development',
@@ -27,9 +28,10 @@ module.exports = {
 
   module: {
     rules: [
-      img,
+      images,
       pug,
       sass,
+      videos,
     ],
   },
 
