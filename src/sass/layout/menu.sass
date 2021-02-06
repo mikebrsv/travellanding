@@ -1,0 +1,25 @@
+.menu
+  position: absolute
+  top: 0
+  right: -300px
+  width: 300px
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: .5s
+
+  &.active
+    right: 0
+
+  ul
+    position: relative
+    list-style: none
+
+    li a
+      font-size: 24px
+      color: #111
+      transition: .2s
+
+      &:hover
+        color: $overlay-color
