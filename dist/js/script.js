@@ -1,0 +1,1 @@
+!function(){"use strict";const e=document.querySelector(".toggle"),t=document.querySelector(".showcase");e.addEventListener("click",(()=>{e.classList.toggle("active"),t.classList.toggle("active")}))}();
