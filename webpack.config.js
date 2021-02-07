@@ -39,7 +39,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/pug/index.pug',
-      minify: false,
+      minify: true,
       inject: false,
     }),
 
