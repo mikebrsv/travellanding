@@ -2,7 +2,9 @@
   // position: absolute
   position: relative
   width: 100%
-  min-height: 100vh
+  height: 100vh
+  max-height: 1200px
+  min-height: 500px
   // padding: 100px
   // display: flex
   // justify-content: space-between
@@ -18,21 +20,25 @@
   width: 100%
   height: 100%
   padding: 100px
+  padding-top: 0
+  padding-bottom: 0
   display: flex
   justify-content: space-between
   align-items: center
   justify-content: center
 
   header
-    position: absolute
+    // position: absolute
     top: 0
     left: 0
     width: 100%
-    padding: 40px 100px
+    // padding: 40px 100px
+    padding: 30px 0
     z-index: 1000
     display: flex
     align-items: center
     justify-content: space-between
+    position: relative
 
     .logo
       text-transform: uppercase
@@ -46,7 +52,8 @@
           color: $overlay-color
 
   .toggle
-    position: relative
+    // position: relative
+    position: fixed
     width: 60px
     height: 60px
     background: url('../assets/images/menu.png')
@@ -54,12 +61,16 @@
     background-size: 30px
     background-position: center
     cursor: pointer
+    top: 18px
+    right: 100px
+    transition: .2s
 
     &.active
       background: url('../assets/images/close.png')
       background-repeat: no-repeat
       background-size: 25px
       background-position: center
+      filter: invert(1)
 
   video
     position: absolute
@@ -73,6 +84,7 @@
   .text
     position: relative
     z-index: 10
+    padding-bottom: 30px
 
     h2
       font-size: 5em
@@ -109,14 +121,16 @@
         letter-spacing: 6px
 
   .social
-    position: absolute
-    bottom: 20px
+    // position: absolute
+    // bottom: 20px
     z-index: 10
     display: flex
     justify-content: center
     align-items: center
     margin-left: -5px
     margin-right: -5px
+    position: relative
+    padding-bottom: 30px
 
     li
       list-style: none
@@ -152,17 +166,28 @@
   max-width: 1600px
   display: flex
   justify-content: space-between
-  align-items: center
+  align-items: flex-start
+  flex-flow: column
+  justify-content: space-between
 
 @media(max-width: 767.98px)
-  .showcase-inner,
-  .showcase-inner header
-    padding: 40px
+  .showcase-inner
+    padding: 0 40px
 
   .showcase-inner
+    .toggle
+      right: 40px
+
     .text
       h2
         font-size: 3rem
 
       h3
         font-size: 2em
+
+@media(max-width: 575.98px)
+  .showcase-inner
+    padding: 0 15px
+
+    .toggle
+      right: 15px
