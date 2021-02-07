@@ -6,15 +6,19 @@
   height: 100%
   min-height: 300px
   display: flex
-  align-items: center
+  // align-items: center
+  align-items: flex-start
   justify-content: center
   transition: .5s
+  padding: 60px
 
   &.active
     right: 0
 
   ul
-    position: relative
+    // position: relative
+    position: fixed
+    top: 60px
     list-style: none
 
     li a

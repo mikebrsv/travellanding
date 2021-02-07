@@ -16,9 +16,10 @@ html(lang='en')
   body
 
     .content
-      block content
+      .content-main
+        block content
 
-    include ./menu
+      include ./menu
 
     block scriptsOverridden
     script(src='/js/script.js')
